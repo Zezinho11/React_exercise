@@ -115,3 +115,49 @@ function calculateWinner(squares) {
     }
     return null;
 }
+
+//Exemplos da documentação do React
+//checklist
+function Item({ name, isPacked }) {
+  return (
+    <li>
+      {name} {isPacked ? '✔' : '✖'}
+    </li>
+  );
+}
+
+export  function PackingList() {
+  return (
+    <section>
+      <h1>Zezin checklist</h1>
+      <ul>
+        <Item isPacked={true} name="102% pace" />
+        <Item isPacked={true} name="big D" />
+        <Item isPacked={false} name="Brain" />
+      </ul>
+    </section>
+  );
+}
+//lista
+function Item2({ name, importance }) {
+  return (
+    <li className="item">
+      {name}
+      {importance > 0 && ' '}
+      {importance > 0 && <i>(Importance: {importance})</i>}
+    </li>
+  );
+}
+
+export function PackingList2() {
+  return (
+    <section>
+      <h1>Lista</h1>
+      <ul>
+        <Item2 importance={3} name="pokebola" />
+        <Item2 importance={0} name="macaco" />
+        <Item2 importance={8} name="sports car" />
+      </ul>
+    </section>
+  );
+}
