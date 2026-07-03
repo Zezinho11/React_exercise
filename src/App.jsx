@@ -5,6 +5,7 @@ import PackingList2 from './PackingList2.jsx';
 import Contador from './Contador.jsx';
 import MyInput from './textBox.jsx';
 import CheckBox from './CheckBox.jsx';
+import Form from './form.jsx';
 import '../index.css';
 
 function NavLink({ to, children }) {
@@ -32,6 +33,7 @@ export default function App() {
   else if (route === '/contador' || route === 'contador') page = <Contador />;
   else if (route === '/myinput' || route === 'myinput') page = <MyInput />;
   else if (route === '/checkbox' || route === 'checkbox') page = <CheckBox />;
+    else if (route === '/form' || route === 'form') page = <Form />;
   else page = <Game />;
 
   return (
@@ -43,6 +45,7 @@ export default function App() {
         <NavLink to="/contador">Contador</NavLink>
         <NavLink to="/myinput">MyInput</NavLink>
         <NavLink to="/checkbox">CheckBox</NavLink>
+        <NavLink to="/form">Form</NavLink>
       </nav>
       <main>{page}</main>
     </div>
