@@ -436,6 +436,108 @@ h2 {
   color: #f8f8f2;
 }
 
+/* Tic-Tac-Toe Game Styles */
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+}
+
+.game-board {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.status {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent-secondary);
+  min-height: 1.6rem;
+}
+
+.board-row {
+  display: flex;
+}
+
+.square {
+  width: 78px;
+  height: 78px;
+  margin: 0.25rem;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background: var(--bg-tertiary);
+  color: var(--text-main);
+  font-size: 2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.square:hover {
+  background: rgba(138, 43, 226, 0.18);
+  border-color: var(--accent-secondary);
+  transform: translateY(-2px);
+}
+
+.game-info {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1rem 1.2rem;
+  min-width: 220px;
+}
+
+.game-info ol {
+  padding-left: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.game-info li {
+  color: var(--text-muted);
+}
+
+.game-info button {
+  background: var(--bg-tertiary);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.45rem 0.7rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.game-info button:hover {
+  border-color: var(--accent-secondary);
+  color: var(--accent-secondary);
+}
+
+@media (max-width: 600px) {
+  .game {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .square {
+    width: 64px;
+    height: 64px;
+    font-size: 1.7rem;
+  }
+
+  .game-info {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
 /* Animations */
 .animate-fade {
   animation: fadeIn 0.4s ease-out;
